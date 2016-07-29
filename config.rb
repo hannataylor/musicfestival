@@ -44,5 +44,5 @@ configure :build do
 end
 
 configure :build do
-   set :http_prefix, "/"
+   set :http_prefix, "/musicfestival"
 end
