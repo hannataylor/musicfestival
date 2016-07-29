@@ -42,3 +42,7 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+configure :build do
+   set :http_prefix, "/"
+end
