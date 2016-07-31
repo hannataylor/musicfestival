@@ -14,6 +14,3 @@ gem 'middleman-livereload'
 
 # For publishing to Github Pages
 gem 'middleman-gh-pages'
-
-#For jQuery
-gem "jquery-middleman"
