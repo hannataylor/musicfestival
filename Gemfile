@@ -12,4 +12,8 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 
+# For publishing to Github Pages
 gem 'middleman-gh-pages'
+
+#For jQuery
+gem "jquery-middleman"
