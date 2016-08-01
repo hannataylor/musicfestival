@@ -1,19 +1,43 @@
 ---
 title: Lauterbrunnen Valley Music Festival
 ---
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="nav">
+    <ul>
+      <li><a href="#">Lineup</a></li>
+      <li><a href="#">Information</a></li>
+      <li><a href="#" id="tickets">Tickets</a></li>
+    </ul>
+  </nav>
+  <!-- End of navbar -->
 
-<!-- Navbar -->
-<nav class="nav">
-  <ul>
-    <li><a href="#">Lineup</a></li>
-    <li><a href="#">Information</a></li>
-    <li><a href="#" id="tickets">Tickets</a></li>
-  </ul>
-</nav>
-<!-- End of navbar -->
+  <%= image_tag "hero5.png", class: "hero", id: "header" %>
+
+  <div class="hero-logo">
+    <%= image_tag "logo-text-white.png" %>
+  </div>
 
 
-<%= image_tag "hero.png", class: "hero", id: "header" %>
-<div class="hero-logo">
-  <%= image_tag "logo-text.png" %>
-</div>
+  <div class="nav middle-nav">
+    <ul>
+      <li><a href="#">Lineup</a></li>
+      <li><a href="#">Poster</a></li>
+      <li><a href="#">Information</a></li>
+      <li><a href="#">Map & Directions</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Tickets</a></li>
+    </ul>
+  </div>
+
+
+
+  <!-- For sticky footer -->
+  <div class="push"></div>
+
+  <footer class="footer">
+    <div class="countdown">
+      <h5 id="countdown"></h5>
+    </div>
+  </footer>
+</div><!-- End wrapper -->
