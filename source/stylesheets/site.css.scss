@@ -109,27 +109,34 @@ body {
 }
 
 // Footer
-.countdown {
-  text-transform: uppercase;
-  color: white;
-  width: 100%;
-  text-align: center;
-  font-size: 1em;
-}
 .wrapper {
 	min-height: 100%;
 	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
 	height: 100%;
-	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto -300px; /* the bottom margin is the negative value of the footer's height */
 }
 .footer, .push {
-	height: 100px; /* .push must be the same height as .footer */
+	height: 300px; /* .push must be the same height as .footer */
 }
 
 .footer {
-  padding-top: 3em;
-  margin-bottom: 0;
+  padding-top: 1em;
   background-color: $dark-gray;
+  color: white;
+  text-align: center;
+  font-family: Dosis, sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 3em;
+
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer a:hover {
+  color: $lighter-gray;
 }
 
 @media screen and (max-device-width: 480px) and (orientation: portrait){
@@ -139,13 +146,54 @@ body {
   }
 }
 
+.footer ul {
+
+}
+
+.footer li {
+  display: inline-block;
+}
+
+.left {
+  float: left;
+  padding-left: 2em;
+}
+
+.right {
+  float: right;
+  width: 35%;
+  text-align: right;
+  padding-right: 5em;
+}
+
+.right-content {
+  text-transform: none;
+  font-family: Raleway;
+  font-weight: 200;
+}
+
+.copyright {
+  font-weight: 200;
+  letter-spacing: 5px;
+}
+
+#countdown {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.social {
+  font-size: 1.5em;
+  letter-spacing: 20px;
+}
+
 // Body
 
 .container {
-  margin-: 3em;
-  padding: 0;
+  padding: 5em;
+  margin-bottom: -18em;
 }
-
 
 .info-card {
   font-family: Dosis, sans-serif;
@@ -301,7 +349,44 @@ body {
 
 .directions {
   color: $dark-gray;
+  font-family: Raleway;
+  margin-left: -10em;
+  margin-right: 0;
 }
+
+.directions table {
+  border-collapse: separate;
+  border-spacing: 50px 10px;
+  table-layout: fixed;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+.directions th {
+  overflow: hidden;
+  padding: 0;
+}
+
+.directions td {
+  text-align: left;
+  overflow: hidden;
+  text-transform: none;
+  vertical-align: top;
+}
+
+.map-table {
+  width: 500px;
+}
+
+.directions-table {
+  width: 500px;
+}
+
+.bottom-logo {
+  height: 125px;
+}
+
 // Font and Positioning
 .text-center {
   width: 100%;
