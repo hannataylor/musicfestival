@@ -28,3 +28,11 @@ var end = new Date('06/05/2017 06:00 PM');
     }
 
     timer = setInterval(showRemaining, 1000);
+
+document.getElementById("ga-details").click(function(){
+  $(this).css('display', 'inline'));
+});
+
+document.getElementById("vip-details").click(function(){
+  $(this).css('display', 'inline'));
+});
