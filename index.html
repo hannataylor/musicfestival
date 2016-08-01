@@ -13,13 +13,20 @@
 
 
 
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/b81f7c4eeb.js"></script>
+
 
     <script src="//hannataylor.github.io/musicfestival/javascripts/jquery.modal.min-b0a90eba.js" type="text/javascript" charset="utf-8"></script>
+    <script src="//hannataylor.github.io/musicfestival/javascripts/animatescroll.min-35267a4f.js" type="text/javascript" charset="utf-8"></script>
+
     <link rel="stylesheet" href="//hannataylor.github.io/musicfestival/stylesheets/jquery.modal-b3c742d1.css" type="text/css" media="screen" />
 
-    <link href="//hannataylor.github.io/musicfestival/stylesheets/site-513512fd.css" rel="stylesheet" />
-    <script src="//hannataylor.github.io/musicfestival/javascripts/all-829d1a1e.js"></script>
+
+    <link href="//hannataylor.github.io/musicfestival/stylesheets/site-a6aafda9.css" rel="stylesheet" />
+    <script src="//hannataylor.github.io/musicfestival/javascripts/all-60c593d8.js"></script>
 
 
   </head>
@@ -30,9 +37,9 @@
   <!-- Navbar -->
   <nav class="nav">
     <ul>
-      <li><a href="#">Lineup</a></li>
-      <li><a href="#">Information</a></li>
-      <li><a href="#" id="tickets">Tickets</a></li>
+      <li><a onclick="$('.lineup').animatescroll();">Lineup</a></li>
+      <li><a onclick="$('.tickets').animatescroll();" id="tickets">Tickets</a></li>
+
     </ul>
   </nav>
   <!-- End of navbar -->
@@ -46,11 +53,11 @@
 
   <div class="nav middle-nav">
     <ul>
-      <li><a href="#">Lineup</a></li>
-      <li><a href="#">Experience</a></li>
-      <li><a href="#">Tickets</a></li>
-      <li><a href="#">Map & Directions</a></li>
-      <li><a href="#">About</a></li>
+      <li><a onclick="$('.lineup').animatescroll();">Lineup</a></li>
+      <li><a onclick="$('.experience').animatescroll();">Experience</a></li>
+      <li><a onclick="$('.tickets').animatescroll();">Tickets</a></li>
+      <li><a onclick="$('.directions').animatescroll();">Getting Here</a></li>
+      <li><a onclick="$('.footer').animatescroll();">About</a></li>
     </ul>
   </div>
 
@@ -235,17 +242,87 @@
   </section>
 
   <section class="section-body directions">
-    <h1 class="section-title">Map & Directions</h1>
+    <h1 class="section-title">Getting Here</h1>
+
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    var myCenter=new google.maps.LatLng(46.6181951,7.9379647);
+
+    function initialize() {
+      var mapProp = {
+        center:myCenter,
+        zoom:7,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        streetViewControl:true
+      };
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+      var marker=new google.maps.Marker({
+        position:myCenter,
+        });
+
+      marker.setMap(map);
+
+      google.maps.event.addListener(marker,'click',function() {
+        map.setZoom(16);
+        map.setCenter(marker.getPosition());
+        map.setMapTypeId(google.maps.MapTypeId.HYBRID)
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+
+    <table>
+      <tr class="description-title">
+        <th class="map-table">Map</th>
+        <th class="directions-table">Directions</th>
+      </tr>
+      <tr>
+        <td><div id="googleMap" style="width:500px;height:380px;"></div></td>
+        <td>
+          <h2>By Plane</h2>
+          <h4>Fly into Zürich Airport</h5>
+          <h2>By Train</h2>
+          <h4>Take a SBB Train to Interlaken, transfer trains to a Lauterbrunnen bound train.
+              You can take the cable car from Wengen to Männlichen, or the gondola from Grindelwald Grund to
+              Männlichen. Wengen and Grindelwald Grund can be reached by train.</h4>
+          <h2>By Taxi</h2>
+          <h4>Make your way to Interlaken or Lauterbrunnen and ask the taxi driver to take you to Männlichen.</h4>
+        </td>
+      </tr>
+    </table>
   </section>
 
 </div>
   <!-- For sticky footer -->
   <div class="push"></div>
 
+
   <footer class="footer">
-    <div class="countdown">
-      <h5 id="countdown"></h5>
-    </div>
+    <ul>
+      <li class="left">
+        <img src="//hannataylor.github.io/musicfestival/images/logo-text-white-d38fb841.png" class="bottom-logo" alt="Logo text white" />
+        <h3 id="countdown"></h3>
+      </li>
+      <li class="right">
+        <h2>About this site</h2>
+        <h4 class="right-content">Languages/Tecnologies used:<br> Ruby, Middleman, jQuery, JavaScript, Google Maps API, HTML5, CSS3, Adobe Lightroom, Adobe Photoshop</h4>
+        <h4 class="right-content">This site was hard-coded by myself without the use of a theme or even a CSS framework</h4>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <h4 class="copyright">COPYRIGHT © 2016, WEBSITE, GRAPHIC DESIGN, AND PHOTOGRAPHY BY <a href="https://hanna-taylor.com">HANNA TAYLOR</a></h4>
+        <div class="social">
+          <a href="https://github.com/hannataylor"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="https://hanna-taylor.com"><i class="fa fa-laptop" aria-hidden="true"></i></a>
+          <a href="https://linkedin.com/in/hannataylor"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/hanna__taylor"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://instagram.com/hanna__taylor"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+      </li>
+    </ul>
   </footer>
 </div><!-- End wrapper -->
 
