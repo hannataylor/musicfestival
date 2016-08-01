@@ -4,7 +4,7 @@
 body {
   font-family: Lato, sans-serif;
   background-color: white;
-  height: 3000px;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -22,11 +22,11 @@ body {
   margin-left: 0 auto;
   margin-right: 0 auto;
   position: absolute;
-  margin-top: 10%;
+  margin-top: 23%;
 }
 
 .hero-logo img {
-  width: 40vw;
+  width: 45vw;
 }
 
 // Navbar
@@ -50,6 +50,8 @@ body {
 
 .nav a {
   text-decoration: none;
+  font-weight: 200;
+  font-size: 1em;
   color: #fff;
   display: block;
   transition: .4s;
@@ -60,7 +62,9 @@ body {
 }
 
 .nav a:hover {
-  color: #323232;
+  color: #adadad;
+  border-bottom: 3px solid white;
+  padding-bottom: 10px;
 }
 
 #tickets {
@@ -70,5 +74,62 @@ body {
 
 #tickets:hover {
   background-color: white;
-  color: #323232;
+  color: #5e5e5e;
+}
+
+.middle-nav {
+  margin-top: -15%;
+  position: static;
+}
+
+.middle-nav ul {
+  padding:0;
+  text-align: center;
+}
+
+.middle-nav a {
+  color: #252525;
+  font-size: 1.25em;
+  display: block;
+  transition: .4s;
+  -o-transition: .4s;
+  -ms-transition: .4s;
+  -moz-transition: .4s;
+  -webkit-transition: .4s;
+}
+
+.middle-nav a:hover {
+  color: #5d5c5c;
+  border-bottom: 3px solid #252525;
+}
+
+// Footer
+.countdown {
+  text-transform: uppercase;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+	height: 100px; /* .push must be the same height as .footer */
+}
+
+.footer {
+  padding-top: 3em;
+  margin-bottom: 0;
+  background-color: #252525;
+}
+
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+  /* some CSS here */
+  .footer {
+    visibility: hidden;
+  }
 }
