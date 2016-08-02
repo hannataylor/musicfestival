@@ -253,15 +253,35 @@
         <td><div id="googleMap" style="width:500px;height:380px;"></div></td>
 
         <script>
-        var myCenter=new google.maps.LatLng(46.6181951,7.9379647);
 
-        var map;
         function initMap() {
-          map = new google.maps.Map(document.getElementById('googleMap'), {
-            center: {lat: 46.6181951, lng: 7.9379647},
-            zoom: 12
-          });
-        }
+        var myLatLng = {lat: 46.6181951, lng: 7.9379647};
+
+        var map = new google.maps.Map(document.getElementById('googleMap'), {
+          zoom: 12,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Lauterbrunen Valley Music Festival'
+        });
+
+        map.addListener('center_changed', function() {
+          // 3 seconds after the center of the map has changed, pan back to the
+          // marker.
+          window.setTimeout(function() {
+            map.panTo(marker.getPosition());
+          }, 3000);
+        });
+
+        marker.addListener('click', function() {
+          map.setZoom(18);
+          map.setMapTypeId(google.maps.MapTypeId.HYBRID)
+          map.setCenter(marker.getPosition());
+        });
+      }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuM011aO4o9jwNBBWGwqaRRjcg5c4bPWw&callback=initMap"
         async defer></script>
