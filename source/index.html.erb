@@ -212,7 +212,6 @@ title: Lauterbrunnen Valley Music Festival
   <section class="section-body directions">
     <h1 class="section-title">Getting Here</h1>
 
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script>
     var myCenter=new google.maps.LatLng(46.6181951,7.9379647);
 
@@ -271,7 +270,9 @@ title: Lauterbrunnen Valley Music Festival
     <ul>
       <li class="left">
         <%= image_tag "logo-text-white.png", class: "bottom-logo" %>
-        <h3 id="countdown"></h3>
+        <div class="countdown-container">
+          <h3 id="countdown"></h3>
+        </div>
       </li>
       <li class="right">
         <h2>About this site</h2>
