@@ -429,7 +429,7 @@ body {
 }
 
 .mobile-footer {
-  visibility: hidden;
+  display: none;
 }
 
 #googleMap {
@@ -600,7 +600,7 @@ body {
   }
 
   .mobile-footer {
-    visibility: visible;
+    display: block;
     margin-top: -18em;
     background-color: $dark-gray;
     color: white;
