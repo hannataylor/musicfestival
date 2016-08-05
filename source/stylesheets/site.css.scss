@@ -432,6 +432,14 @@ body {
   visibility: hidden;
 }
 
+#googleMap {
+  width:500px;
+  height:380px
+}
+
+.mobile-directions {
+  display: none;
+}
 /* For mobile devices */
 
 @media screen and (max-device-width: 760px) {
@@ -565,6 +573,19 @@ body {
     display: none;
   }
 
+  #googleMap {
+    display: none;
+  }
+
+  .directions table {
+    display: none;
+  }
+
+
+  .mobile-directions {
+    display: block;
+    font-size: .7em;
+  }
   /* Mobile footer */
   .footer {
     display: none;
@@ -580,7 +601,7 @@ body {
 
   .mobile-footer {
     visibility: visible;
-    margin-top: 18em;
+    margin-top: -18em;
     background-color: $dark-gray;
     color: white;
     text-align: center;
