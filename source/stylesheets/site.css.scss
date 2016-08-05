@@ -139,17 +139,6 @@ body {
   color: $lighter-gray;
 }
 
-@media screen and (max-device-width: 480px) and (orientation: portrait){
-  /* some CSS here */
-  .footer {
-    visibility: hidden;
-  }
-}
-
-.footer ul {
-
-}
-
 .footer li {
   display: inline-block;
 }
@@ -438,3 +427,73 @@ body {
 .big {
   font-size: 1.5em;
 }
+
+.mobile-footer {
+  visibility: hidden;
+}
+
+/* For mobile devices */
+
+@media screen and (max-device-width: 760px) {
+
+  .container {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin: 0;
+  }
+  .info-card {
+    border: 3px solid $dark-gray;
+    letter-spacing: 5px;
+    margin-bottom: 3em;
+    margin-top: -4em;
+    text-align: center;
+  }
+
+  .info-card {
+    font-size: .5em;
+  }
+  .info-card h4 {
+    font-size: .75em;
+  }
+  /* Mobile footer */
+  .footer {
+    display: none;
+  }
+
+  .wrapper {
+  	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+  }
+
+  .mobile-footer, .push {
+  	height: 100px; /* .push must be the same height as .footer */
+  }
+
+  .mobile-footer {
+    visibility: visible;
+    margin-top: 18em;
+    background-color: $dark-gray;
+    color: white;
+    text-align: center;
+    font-family: Dosis, sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 0 10px;
+    padding-top: 10px;
+  }
+
+  .mobile-footer a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .mobile-footer a:hover {
+    color: $lighter-gray;
+  }
+
+  .mobile-footer li {
+    display: inline-block;
+  }
+
+  /* End mobile footer */
+
+} /* End @media */
