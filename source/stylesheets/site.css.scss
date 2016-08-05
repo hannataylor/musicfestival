@@ -139,17 +139,6 @@ body {
   color: $lighter-gray;
 }
 
-@media screen and (max-device-width: 480px) and (orientation: portrait){
-  /* some CSS here */
-  .footer {
-    visibility: hidden;
-  }
-}
-
-.footer ul {
-
-}
-
 .footer li {
   display: inline-block;
 }
@@ -438,3 +427,204 @@ body {
 .big {
   font-size: 1.5em;
 }
+
+.mobile-footer {
+  visibility: hidden;
+}
+
+#googleMap {
+  width:500px;
+  height:380px
+}
+
+.mobile-directions {
+  display: none;
+}
+/* For mobile devices */
+
+@media screen and (max-device-width: 760px) {
+
+  .container {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin: 0;
+  }
+
+  .nav a {
+    font-size: .7em;
+  }
+
+  .middle-nav li {
+    font-size: 1.25em;
+    height: 1em;
+  }
+  .middle-nav ul {
+    height: 1em;
+  }
+  .middle-nav a:hover {
+    color: #5d5c5c;
+    border: none;
+  }
+
+  .info-card {
+    border: 3px solid $dark-gray;
+    letter-spacing: 5px;
+    margin-bottom: 3em;
+    margin-top: -6em;
+    text-align: center;
+    font-size: 3vw;
+  }
+
+  .section-title {
+    letter-spacing: auto;
+    font-size: 1.25em;
+    width: auto;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    padding-left: 5vw;
+  }
+
+  .section-subtitle {
+    margin-top: 1em;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    letter-spacing: 2vw;
+    font-size: .6em;
+    border: none;
+    padding-left: 5px;
+  }
+
+  .section-body {
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+
+  .biggest {
+    font-size: 1.25em;
+  }
+  .bigger {
+    font-size: 1em;
+  }
+
+  .big {
+    font-size: .75em;
+  }
+
+  .artists {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .icon-graphic {
+    height: 3em;
+  }
+
+
+  .description {
+    font-size: .75em;
+  }
+  .description-title {
+    font-size: 1em;
+  }
+
+  .icon-set th,td, tr {
+    width: 1vw;
+  }
+
+  .icon-set {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .icon-set img {
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+
+  .tickets table {
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+    font-size: .6em;
+  }
+
+  .tickets th {
+    padding: 10px;
+    overflow: hidden;
+    font-size: 2em;
+  }
+
+  .tickets td {
+    padding: 5px;
+  }
+
+  .myBtn {
+    display: none;
+  }
+
+  #googleMap {
+    display: none;
+  }
+
+  .directions table {
+    display: none;
+  }
+
+
+  .mobile-directions {
+    display: block;
+    font-size: .7em;
+  }
+  /* Mobile footer */
+  .footer {
+    display: none;
+  }
+
+  .wrapper {
+  	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+  }
+
+  .mobile-footer, .push {
+  	height: 100px; /* .push must be the same height as .footer */
+  }
+
+  .mobile-footer {
+    visibility: visible;
+    margin-top: -18em;
+    background-color: $dark-gray;
+    color: white;
+    text-align: center;
+    font-family: Dosis, sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 0 10px;
+    padding-top: 10px;
+  }
+
+  .mobile-footer a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .mobile-footer a:hover {
+    color: $lighter-gray;
+  }
+
+  .mobile-footer li {
+    display: inline-block;
+  }
+
+  /* End mobile footer */
+
+} /* End @media */
