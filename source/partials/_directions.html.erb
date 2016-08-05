@@ -1,0 +1,58 @@
+<section class="section-body directions">
+  <h1 class="section-title getting-here">Getting Here</h1>
+
+  <table>
+    <tr class="description-title">
+      <th class="map-table">Map</th>
+      <th class="directions-table">Directions</th>
+    </tr>
+    <tr>
+      <td><div id="googleMap" style="width:500px;height:380px;"></div></td>
+
+      <script>
+
+      function initMap() {
+      var myLatLng = {lat: 46.6181951, lng: 7.9379647};
+
+      var map = new google.maps.Map(document.getElementById('googleMap'), {
+        zoom: 12,
+        center: myLatLng
+      });
+
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Lauterbrunen Valley Music Festival'
+      });
+
+      map.addListener('center_changed', function() {
+        // 3 seconds after the center of the map has changed, pan back to the
+        // marker.
+        window.setTimeout(function() {
+          map.panTo(marker.getPosition());
+        }, 3000);
+      });
+
+      marker.addListener('click', function() {
+        map.setZoom(18);
+        map.setMapTypeId(google.maps.MapTypeId.HYBRID)
+        map.setCenter(marker.getPosition());
+      });
+    }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuM011aO4o9jwNBBWGwqaRRjcg5c4bPWw&callback=initMap"
+      async defer></script>
+
+      <td>
+        <h2>By Plane</h2>
+        <h4>Fly into Zürich Airport</h5>
+        <h2>By Train</h2>
+        <h4>Take a SBB Train to Interlaken, transfer trains to a Lauterbrunnen bound train.
+            You can take the cable car from Wengen to Männlichen, or the gondola from Grindelwald Grund to
+            Männlichen. Wengen and Grindelwald Grund can be reached by train.</h4>
+        <h2>By Taxi</h2>
+        <h4>Make your way to Interlaken or Lauterbrunnen and ask the taxi driver to take you to Männlichen.</h4>
+      </td>
+    </tr>
+  </table>
+</section>
